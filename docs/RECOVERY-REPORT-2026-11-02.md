@@ -10,7 +10,7 @@ This is a public-safe engineering report. It does not include local databases, c
 | Repository | Main commit at review | License | Root changelog | Root security policy | CI |
 |---|---|---|---|---|---|
 | [Open-Swarm](https://github.com/HuffmanMainNode/-Open-Swarm) | `677df8a085907761d9201a94bcddac156a7d1a23` | MIT | Yes | Yes | Green on Python 3.11-3.13 |
-| [HCO](https://github.com/HuffmanMainNode/Huffman-Cyber-Observatory) | `273dcbe03ea634907bc6570f2dee9bdc2c8b4fdc` | MIT | Yes | Yes | Python 3.11-3.13 update merged; post-merge run must be confirmed |
+| [HCO](https://github.com/HuffmanMainNode/Huffman-Cyber-Observatory) | `273dcbe03ea634907bc6570f2dee9bdc2c8b4fdc` | MIT | Yes | Yes | Green on Python 3.11-3.13 after both Actions updates merged |
 | [Halloween OSINT](https://github.com/HuffmanMainNode/Halloween-OSINT-2026) | `be84ebb5aeb97ed2d891151d613d36f95dd4ddd8` | Apache-2.0 | Yes | Yes | Green on Python 3.11-3.13 |
 | [OIX](https://github.com/HuffmanMainNode/Open-Intelligence-Exchange) | `f37cf58447ed30b36660a45ec223644fb7dfac38` | MIT | Yes | Yes | Green on Python 3.11-3.13 |
 
@@ -55,7 +55,7 @@ A synthetic integration demo is included at [examples/ecosystem_demo.py](../exam
 4. HCO Ed25519 signing and verification of the manifest bytes.
 5. OIX signed evidence receipt containing the manifest digest.
 
-The demo uses only temporary synthetic data, local in-process calls, a mock adapter, and temporary keys. It is not a production transport, interactive approval service, or proof of real-world evidence authenticity.
+The demo uses only temporary synthetic data, local in-process calls, a mock adapter, and temporary keys. It is not a production transport, interactive approval service, or proof of real-world evidence authenticity. The profile-repository PR workflow passed Ruff, Bandit, pytest, and the executable demo on Python 3.11, 3.12, and 3.13 (run `41376947667`, commit `9cbc32f39a5b6b1972899666091ba7ded449212a`).
 
 ## Outstanding / not verified
 
@@ -71,3 +71,21 @@ The demo uses only temporary synthetic data, local in-process calls, a mock adap
 ## Commit provenance
 
 The GitHub commits and Actions runs are the evidence of pushed source state. This report intentionally does not claim that local-only artifacts were recovered. See each repository's commit history and Actions page for the live, current state.
+
+
+## Ecosystem task status
+
+- **E1, umbrella index:** implemented in the public [HuffmanMainNode profile repository](https://github.com/HuffmanMainNode/HuffmanMainNode), PR #1. It adds a repository index, architecture diagram, license table, limitations, and links to the demo and this report.
+- **E2, shared core:** decision documented. No shared package extracted because OIX identity signing, HCO artifact signing, and the two manifest schemas have different contracts. The demo verifies the actual cross-project boundary by signing the Halloween manifest bytes with HCO and carrying its digest in an OIX receipt.
+- **E3, end-to-end demo:** implemented with synthetic data and passed the three-version CI matrix. This is an in-process proof, not a networked deployment or production bridge.
+- **E4, releases:** changelogs exist, but no v0.1.x tags, release bundles, SBOM-attached releases, or published checksums have been created.
+- **E5, licensing/governance:** current per-repository licenses are documented and retained. No retroactive relicensing was performed.
+- **E6, NIST mapping:** optional and not implemented.
+
+## Pull-request cleanup
+
+- Open-Swarm PR #1 was closed as superseded, not merged. PRs #2 and #3 were merged.
+- HCO Dependabot PR #1 and rebased PR #6 were merged after all three Python matrix jobs passed. The stale original Dependabot PR #2 was closed after it conflicted with the first update.
+- Halloween PR #1 was merged.
+- OIX PRs #1 and #2 were merged.
+- The umbrella index/demo is proposed in [HuffmanMainNode PR #1](https://github.com/HuffmanMainNode/HuffmanMainNode/pull/1); its latest three-version integration workflow is green, pending merge.
