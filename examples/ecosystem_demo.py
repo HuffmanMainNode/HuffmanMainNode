@@ -13,7 +13,6 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 from halloween_osint.mcp_server import handle as handle_mcp
 from huffman_cyber.crypto import generate_ed25519, sign_file, verify_signature
 from oix.envelope import create_message, verify_for_recipient
@@ -36,8 +35,8 @@ def run_demo() -> dict[str, Any]:
         root = Path(temp)
         sender_dir = root / "sender"
         receiver_dir = root / "receiver"
-        sender = generate_identity(sender_dir, "Synthetic Research Agent", ["evidence.review"])
-        receiver = generate_identity(receiver_dir, "Synthetic Evidence Agent", ["evidence.review"])
+        generate_identity(sender_dir, "Synthetic Research Agent", ["evidence.review"])
+        generate_identity(receiver_dir, "Synthetic Evidence Agent", ["evidence.review"])
         sender_card = load_card(sender_dir / "agent-card.json")
         receiver_card = load_card(receiver_dir / "agent-card.json")
         if not verify_card(sender_card) or not verify_card(receiver_card):
@@ -167,8 +166,6 @@ def run_demo() -> dict[str, Any]:
         if replay.accept(receipt["body"]):
             raise RuntimeError("OIX durable replay cache accepted a duplicate receipt")
 
-        # Confirm the signature can be independently checked from the public key.
-        Ed25519PublicKey.from_public_bytes(receiver_public)
         return {
             "status": "PASS",
             "synthetic_data_only": True,
