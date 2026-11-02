@@ -48,5 +48,5 @@ jobs:
           persist-credentials: false
       - run: python -m pip install --upgrade pip pytest
       - run: python -m pip install -e vendor/oix -e vendor/open-swarm -e vendor/halloween-osint -e vendor/hco
-      - run: python -m pytest -q
+      - run: python -m pytest -q tests
       - run: python examples/ecosystem_demo.py
