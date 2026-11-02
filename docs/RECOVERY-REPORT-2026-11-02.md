@@ -88,4 +88,4 @@ The GitHub commits and Actions runs are the evidence of pushed source state. Thi
 - HCO Dependabot PR #1 and rebased PR #6 were merged after all three Python matrix jobs passed. The stale original Dependabot PR #2 was closed after it conflicted with the first update.
 - Halloween PR #1 was merged.
 - OIX PRs #1 and #2 were merged.
-- The umbrella index/demo is proposed in [HuffmanMainNode PR #1](https://github.com/HuffmanMainNode/HuffmanMainNode/pull/1); its latest three-version integration workflow is green, pending merge.
+- The umbrella index/demo was merged through [HuffmanMainNode PR #1](https://github.com/HuffmanMainNode/HuffmanMainNode/pull/1), producing main commit `0a22a7ce4e699b713bd1e10a52d7cab4ef5f1ce4`. Its synthetic integration workflow passed Ruff, Bandit, pytest, and the executable demo on Python 3.11, 3.12, and 3.13 before merge.
