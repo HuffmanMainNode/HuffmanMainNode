@@ -12,7 +12,7 @@ This is a public-safe engineering report. It does not include local databases, c
 | [Open-Swarm](https://github.com/HuffmanMainNode/-Open-Swarm) | `677df8a085907761d9201a94bcddac156a7d1a23` | MIT | Yes | Yes | Green on Python 3.11-3.13 |
 | [HCO](https://github.com/HuffmanMainNode/Huffman-Cyber-Observatory) | `273dcbe03ea634907bc6570f2dee9bdc2c8b4fdc` | MIT | Yes | Yes | Green on Python 3.11-3.13 after both Actions updates merged |
 | [Halloween OSINT](https://github.com/HuffmanMainNode/Halloween-OSINT-2026) | `be84ebb5aeb97ed2d891151d613d36f95dd4ddd8` | Apache-2.0 | Yes | Yes | Green on Python 3.11-3.13 |
-| [OIX](https://github.com/HuffmanMainNode/Open-Intelligence-Exchange) | `f37cf58447ed30b36660a45ec223644fb7dfac38` | MIT | Yes | Yes | Green on Python 3.11-3.13 |
+| [OIX](https://github.com/HuffmanMainNode/Open-Intelligence-Exchange) | `8c25c3b014eddaf074d5c86f0244e22140617728` | MIT | Yes | Yes | Green on Python 3.11-3.13 |
 
 ## Recovery and remediation merged
 
@@ -87,5 +87,5 @@ The GitHub commits and Actions runs are the evidence of pushed source state. Thi
 - Open-Swarm PR #1 was closed as superseded, not merged. PRs #2 and #3 were merged.
 - HCO Dependabot PR #1 and rebased PR #6 were merged after all three Python matrix jobs passed. The stale original Dependabot PR #2 was closed after it conflicted with the first update.
 - Halloween PR #1 was merged.
-- OIX PRs #1 and #2 were merged.
+- OIX PRs #1, #2, and #3 were merged. PR #3 corrected the threat-model wording so durable local SQLite replay is not incorrectly listed as wholly unimplemented.
 - The umbrella index/demo was merged through [HuffmanMainNode PR #1](https://github.com/HuffmanMainNode/HuffmanMainNode/pull/1), producing main commit `0a22a7ce4e699b713bd1e10a52d7cab4ef5f1ce4`. Its synthetic integration workflow passed Ruff, Bandit, pytest, and the executable demo on Python 3.11, 3.12, and 3.13 before merge.
