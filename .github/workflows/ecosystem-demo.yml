@@ -25,25 +25,25 @@ jobs:
       - uses: actions/checkout@v7
         with:
           repository: HuffmanMainNode/Open-Intelligence-Exchange
-          ref: main
+          ref: 8c25c3b014eddaf074d5c86f0244e22140617728
           path: vendor/oix
           persist-credentials: false
       - uses: actions/checkout@v7
         with:
           repository: HuffmanMainNode/-Open-Swarm
-          ref: main
+          ref: 677df8a085907761d9201a94bcddac156a7d1a23
           path: vendor/open-swarm
           persist-credentials: false
       - uses: actions/checkout@v7
         with:
           repository: HuffmanMainNode/Halloween-OSINT-2026
-          ref: main
+          ref: be84ebb5aeb97ed2d891151d613d36f95dd4ddd8
           path: vendor/halloween-osint
           persist-credentials: false
       - uses: actions/checkout@v7
         with:
           repository: HuffmanMainNode/Huffman-Cyber-Observatory
-          ref: main
+          ref: 273dcbe03ea634907bc6570f2dee9bdc2c8b4fdc
           path: vendor/hco
           persist-credentials: false
       - run: python -m pip install --upgrade pip pytest ruff bandit
