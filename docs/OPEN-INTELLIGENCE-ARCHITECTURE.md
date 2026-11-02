@@ -32,7 +32,7 @@ A synthetic, in-process proof of this path lives in [examples/ecosystem_demo.py]
 - Open-Swarm persists tasks and audit events, uses lease IDs to reject stale workers, supports explicit approve/reject operations, and blocks tasks pending approval.
 - Halloween OSINT provides root-scoped MCP file operations when `--root` or `HALLOWEEN_OSINT_ROOT` is configured. Its EVM inspection command remains CLI-only.
 - HCO inventories CycloneDX/SPDX JSON SBOMs and correlates explicit CVE identifiers against a saved CISA KEV snapshot. It does not resolve package versions or prove exploitability.
-- The synthetic integration demo connects these APIs locally and is exercised by a Python 3.11-3.13 GitHub Actions matrix.
+- The synthetic integration demo connects these APIs locally and is exercised by a Python 3.11-3.13 GitHub Actions matrix. Its workflow pins each dependency repository to the exact reviewed commit so a later upstream push cannot silently change the test fixture; update those pins deliberately when the integration contract is revalidated.
 
 ## What is not implemented
 
