@@ -145,3 +145,25 @@ I actively encourage the open-source community to engage. If you see a way to op
   <p style="font-size: 12px; color: #A0AEC0; font-family: monospace; margin: 0;">&gt;&gt; BASE64_DECRYPT_TO_VERIFY_CORE_DIRECTIVE</p>
 </div>
 <span style="display:none;" data-sig="UGxhbiB5b3VyIHdvcmssIHdvcmsgd2VsbCB5b3VyIHBsYW4="></span>
+
+
+---
+
+## [ OPEN INTELLIGENCE ENGINEERING WORKSTREAM ]
+
+A public, experimental four-project workstream for signed agent messaging, local task orchestration, defensive cyber observation, and evidence integrity.
+
+| Project | Purpose | License | Status |
+|---|---|---|---|
+| [Open Intelligence Exchange](https://github.com/HuffmanMainNode/Open-Intelligence-Exchange) | Signed agent messages, identity, capability labels, replay protection | MIT | Experimental, CI matrix |
+| [Open-Swarm](https://github.com/HuffmanMainNode/-Open-Swarm) | Local-first task queue, policy checks, approval workflow, mock/Ollama adapters | MIT | Experimental, CI matrix |
+| [Huffman Cyber Observatory](https://github.com/HuffmanMainNode/Huffman-Cyber-Observatory) | Defensive scanning, SBOM/KEV inventory, encryption and artifact signing | MIT | Experimental, CI matrix |
+| [Halloween OSINT 2026](https://github.com/HuffmanMainNode/Halloween-OSINT-2026) | Evidence manifests, passive DNS/TLS observations, offline transaction analysis, read-only EVM inspection | Apache-2.0 | Experimental, CI matrix |
+
+**Architecture and limitations:** [Open Intelligence Architecture](docs/OPEN-INTELLIGENCE-ARCHITECTURE.md)
+
+**Synthetic integration demonstration:** [examples/ecosystem_demo.py](examples/ecosystem_demo.py) exercises an OIX signed request, Open-Swarm approval-gated mock task, Halloween MCP evidence manifest, HCO signature, and OIX signed receipt. It uses temporary synthetic data only. Its CI workflow covers Python 3.11, 3.12, and 3.13.
+
+**Recovery and verification record:** [Recovery Report, 2026-11-02](docs/RECOVERY-REPORT-2026-11-02.md)
+
+These projects are experimental. Green automated checks are not a third-party security audit, certification, or claim of production readiness. Network transport, a production OIX-to-Swarm bridge, distributed scheduling, and OS-level sandboxing are not implemented.
