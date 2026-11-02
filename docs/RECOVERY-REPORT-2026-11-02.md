@@ -55,7 +55,7 @@ A synthetic integration demo is included at [examples/ecosystem_demo.py](../exam
 4. HCO Ed25519 signing and verification of the manifest bytes.
 5. OIX signed evidence receipt containing the manifest digest.
 
-The demo uses only temporary synthetic data, local in-process calls, a mock adapter, and temporary keys. It is not a production transport, interactive approval service, or proof of real-world evidence authenticity. The profile-repository PR workflow passed Ruff, Bandit, pytest, and the executable demo on Python 3.11, 3.12, and 3.13 (run `41376947667`, commit `9cbc32f39a5b6b1972899666091ba7ded449212a`).
+The demo uses only temporary synthetic data, local in-process calls, a mock adapter, and temporary keys. It is not a production transport, interactive approval service, or proof of real-world evidence authenticity. The profile-repository PR workflow passed Ruff, Bandit, pytest, and the executable demo on Python 3.11, 3.12, and 3.13 (run `41376947667`, commit `9cbc32f39a5b6b1972899666091ba7ded449212a`). A follow-up pinned all four dependency checkouts to immutable reviewed commits; the pinned matrix also passed all three Python versions (run `41377414107`) and merged as main commit `5283991e6417dfef785439debbeb1bd488f34a7e`.
 
 ## Outstanding / not verified
 
@@ -88,4 +88,5 @@ The GitHub commits and Actions runs are the evidence of pushed source state. Thi
 - HCO Dependabot PR #1 and rebased PR #6 were merged after all three Python matrix jobs passed. The stale original Dependabot PR #2 was closed after it conflicted with the first update.
 - Halloween PR #1 was merged.
 - OIX PRs #1, #2, and #3 were merged. PR #3 corrected the threat-model wording so durable local SQLite replay is not incorrectly listed as wholly unimplemented.
-- The umbrella index/demo was merged through [HuffmanMainNode PR #1](https://github.com/HuffmanMainNode/HuffmanMainNode/pull/1), producing main commit `0a22a7ce4e699b713bd1e10a52d7cab4ef5f1ce4`. Its synthetic integration workflow passed Ruff, Bandit, pytest, and the executable demo on Python 3.11, 3.12, and 3.13 before merge.
+- The umbrella index/demo was merged through [HuffmanMainNode PR #1](https://github.com/HuffmanMainNode/HuffmanMainNode/pull/1), producing main commit `0a22a7ce4e699b713bd1e10a52d7cab4ef5f1ce4`.
+- The reproducibility pinning update was merged through [HuffmanMainNode PR #4](https://github.com/HuffmanMainNode/HuffmanMainNode/pull/4) as `5283991e6417dfef785439debbeb1bd488f34a7e`; its pinned dependency matrix passed Python 3.11-3.13.
