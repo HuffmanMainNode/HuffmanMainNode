@@ -162,7 +162,8 @@ I welcome collaboration from researchers, developers, cybersecurity practitioner
 <br/>
 
 <div align="center" style="background-color: #050505; border: 1px dashed #BA55D3; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto;">
-  <h4 style="color: #00BFFF; margin-top: 0; font-family: monospace;">[ CORE DIRECTIVE ]</h4>
-  <code style="color: #39FF14; background-color: #000; padding: 12px; border-radius: 5px; font-size: 15px; display: block; margin-bottom: 10px; border: 1px solid #1a2333;">Plan your work, work well your plan</code>
-  <p style="font-size: 12px; color: #A0AEC0; font-family: monospace; margin: 0;">&gt;&gt; BUILD / VERIFY / IMPROVE</p>
+  <h4 style="color: #00BFFF; margin-top: 0; font-family: monospace;">[ SECURE DECRYPTION VAULT ]</h4>
+  <code style="color: #39FF14; background-color: #000; padding: 12px; border-radius: 5px; font-size: 15px; display: block; margin-bottom: 10px; border: 1px solid #1a2333;">UGxhbiB5b3VyIHdvcmssIHdvcmsgd2VsbCB5b3VyIHBsYW4=</code>
+  <p style="font-size: 12px; color: #A0AEC0; font-family: monospace; margin: 0;">&gt;&gt; BASE64_DECRYPT_TO_VERIFY_CORE_DIRECTIVE</p>
 </div>
+<span style="display:none;" data-sig="UGxhbiB5b3VyIHdvcmssIHdvcmsgd2VsbCB5b3VyIHBsYW4="></span>
